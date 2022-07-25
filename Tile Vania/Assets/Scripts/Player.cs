@@ -43,12 +43,16 @@ public class Player : MonoBehaviour
          
 
     }
+    private void climbLadder()
+    {
+
+    }
 
     private void Jump()
     {
         if (!myCollider2D.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
-            return;
+            return; 
         }
         if (CrossPlatformInputManager.GetButtonDown("Jump"))
         {
