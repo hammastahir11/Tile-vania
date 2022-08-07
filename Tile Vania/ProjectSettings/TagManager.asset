@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - foot
+  - Next
   layers:
   - Default
   - TransparentFX
@@ -19,8 +21,8 @@ TagManager:
   - Background
   - Enemy
   - Hazards
-  - 
-  - 
+  - Exiting
+  - Gate
   - 
   - 
   - 
@@ -55,6 +57,12 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 4235627507
+    locked: 0
+  - name: Exiting
+    uniqueID: 2422049661
+    locked: 0
+  - name: Gate
+    uniqueID: 2968123963
     locked: 0
   - name: Foreground
     uniqueID: 3802317555
