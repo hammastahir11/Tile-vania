@@ -8,6 +8,12 @@ public class LevelExit : MonoBehaviour
     [SerializeField] float LevelLoadDelay=2f;
     void OnTriggerEnter2D(Collider2D col)
     {
+        var desobj = FindObjectOfType<ScenePersistent>();
+        if (desobj!=null)
+        {
+            Destroy(desobj);
+        }
+        
         StartCoroutine(LoadNextLevel());   
     }
     IEnumerator LoadNextLevel()

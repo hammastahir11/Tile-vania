@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9fc35eebe8944744a46455951942987, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLives: 3
+  playerLives: 10
   playerScore: 0
   live: {fileID: 500706778}
   Score: {fileID: 880099527}
