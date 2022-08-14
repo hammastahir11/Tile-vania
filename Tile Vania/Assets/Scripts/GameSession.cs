@@ -13,7 +13,8 @@ public class GameSession : MonoBehaviour
     [SerializeField] Text live;
     [SerializeField] Text Score;
 
-     
+
+   
     private void Awake()
     {
         int numGameSessions = FindObjectsOfType<GameSession>().Length;
@@ -46,6 +47,8 @@ public class GameSession : MonoBehaviour
         if (playerLives > 1)
         {
             TakeLife();
+            
+           
         }
         else
         {
@@ -55,9 +58,11 @@ public class GameSession : MonoBehaviour
 
     private void TakeLife()
     {
+        
         playerLives--;
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
+        
         live.text = playerLives.ToString();
     }
 

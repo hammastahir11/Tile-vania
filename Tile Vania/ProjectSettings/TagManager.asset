@@ -6,6 +6,8 @@ TagManager:
   tags:
   - foot
   - Next
+  - checkpoint
+  - Newplayer
   layers:
   - Default
   - TransparentFX

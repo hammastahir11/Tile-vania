@@ -10,8 +10,13 @@ public class Player : MonoBehaviour
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] float climbSpeed = 5f;
     [SerializeField] Vector2 deathKick = new Vector2(25f, 25f);
+
+
+
     //state
     bool isAlive = true;
+    //public static Vector2 Respawnpoint = new Vector2(-21, 4);
+
 
     //Cached component refrence
     Rigidbody2D myrigidbody;
@@ -21,6 +26,8 @@ public class Player : MonoBehaviour
     float gravityScaleAtStart;
 
 
+
+
     void Start()
     {
         myrigidbody = GetComponent<Rigidbody2D>();
@@ -28,6 +35,7 @@ public class Player : MonoBehaviour
         myBodyCollider2D = GetComponent<CapsuleCollider2D>();
         myFeet = GetComponent<BoxCollider2D>();
         gravityScaleAtStart = myrigidbody.gravityScale;
+        
     }
 
     // Update is called once per frame
@@ -95,6 +103,8 @@ public class Player : MonoBehaviour
             
             GetComponent<Rigidbody2D>().velocity = deathKick;
             FindObjectOfType<GameSession>().ProcessPlayerDeath();
+          //  GameObject.FindGameObjectWithTag("Newplayer").transform.position = Respawnpoint;
+
         }
     }
 
@@ -106,4 +116,5 @@ public class Player : MonoBehaviour
             transform.localScale = new Vector2(Mathf.Sign(myrigidbody.velocity.x), 1f);        
         }
     }
+
 }
